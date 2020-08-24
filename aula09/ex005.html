@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(101, 101, 255);
+            color: white;
+            font: normal 18ts Arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <div id="msgg">Clique em mim tbm</div>
+    <script>
+        var corpo
+        var p1 = window.document.getElementsByTagName('p')[1]
+        // Pega na DOM todos elementos com nome P            ↑ escolhe so o primeiro elemento P
+        
+        window.document.write('Esta escrito assim: ' + p1.innerText)
+        // ↑   Escreve na DOM                                    ↑  texto dentro de p1
+       
+        p1.style.color = 'blue'
+        // Muda cor do p1
+        document.write(p1.innerHTML)
+        //                  ↑ Pega tudo que entra dentro de p1
+        var d = window.document.getElementById('msg') // Pega na DOM o elemento com id ' msg'
+        d.style.background = 'green'
+        // ↑ Muda a cor do background da var d
+
+        d.innerText = 'Estou aguardando ...'
+        //  ↑↑ Muda o conteudo da var d
+
+        //   window.document.getElementById('msg').innerText = "Olá"  // Muda o conteudo da var d diretamente
+
+     var e = window.document.querySelector('div.msgg') 
+        d.style.background = 'green'
+
+
+
+    </script>
+</body>
+</html>
