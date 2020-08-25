@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+             background: rgb(104, 104, 255);
+             color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    Pais onde nasceu: <input type="text" name="txtpais" id="pais">
+    <input type="button" value="Verificar" onclick="checar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function checar() {
+            var inputElement = document.querySelector('input#pais')
+            var divElement = document.querySelector('div#res')
+            var pais = inputElement.value
+            if (pais == 'Brasil') {
+                divElement.innerHTML = '<p><strong>Você é Brasileiro</strong></p>'
+            }else {
+                divElement.innerHTML = '<p><strong>Você é Estrangeiro</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>
